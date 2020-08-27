@@ -1,0 +1,9 @@
+guia angular
+
+ng new portafolio # create aplicacion
+ng serve -o  # start aplicaccion
+ng generate component shared/header --skipTests=true  # i create header component in shared folder
+    agrego en app.component.html  <app-header></app-header>
+ng generate component pages/portofolio --skipTests=true # create portafolio component en pagina pages
+
+ng generate component pages/about --skipTests=true # creo pagina about
