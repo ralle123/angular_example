@@ -8,15 +8,27 @@ import { PageInfo } from '../interfaces/info-page.interface';
 export class InfoPaginaService {
   info:PageInfo={};
   loaded=false;
-
+  team:any[]=[];
 
   constructor(private http: HttpClient) {
     // console.log('Servicio listo')
+    this.loadInfo();
+    this.loadTeam();
+  }
+  private loadInfo(){
     this.http.get('assets/data/data_page.json')
     .subscribe( (resp: PageInfo) => {
       this.loaded=true;
       this.info=resp;
-      console.log(resp)
-    })
+      // console.log(resp);
+    });
+  }
+  private loadTeam(){
+    this.http.get('https://angular-htmlportfolio.firebaseio.com/Team.json')
+    .subscribe( (resp:any[]) => {
+      this.loaded=true;
+      this.team=resp;
+      console.log(resp);
+    });
   }
 }
