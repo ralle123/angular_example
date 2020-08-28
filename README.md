@@ -1,6 +1,8 @@
 # angular_example
 angular application example created with angular CLI
 
+https://ralle123.github.io/angular_example/
+
 # Portafolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.7.
