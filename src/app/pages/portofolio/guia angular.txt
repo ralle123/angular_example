@@ -7,3 +7,11 @@ ng generate component shared/header --skipTests=true  # i create header componen
 ng generate component pages/portofolio --skipTests=true # create portafolio component en pagina pages
 
 ng generate component pages/about --skipTests=true # creo pagina about
+
+ng build --prod
+
+sudo npm i -g http-server
+http-server -o
+
+git remote add origin https://github.com/ralle123/angular_example.git
+git push -u origin master
